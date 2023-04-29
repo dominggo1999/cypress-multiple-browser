@@ -40,7 +40,7 @@ jobs:
         run: sudo dpkg -i ./microsoft-edge-stable_112.0.1722.64-1_amd64.deb
 
       - name: Display Edge version
-        run: edge --version
+        run: microsoft-edge --version
 
       - name: Display Chrome version
         run: google-chrome --version
