@@ -10,7 +10,7 @@
     "type-check": "tsc --noEmit",
     "test:chrome": "cypress run --e2e --browser chrome",
     "test:firefox": "cypress run --e2e --browser firefox",
-    "test:edge": "cypress run --e2e --browser edge",
+    "test:edge": "cypress run --e2e --browser microsoft-edge",
     "pre-commit": "npx lint-staged"
   },
   "devDependencies": {
