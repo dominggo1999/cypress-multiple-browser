@@ -1,11 +1,3 @@
-name: CI
-
-on:
-  push:
-    branches: ["main"]
-  pull_request:
-    types: [opened, synchronize]
-
 jobs:
   build:
     name: Test
@@ -31,6 +23,12 @@ jobs:
         with:
           node-version: 16
           cache: "pnpm"
+
+      - name: Display Chrome version
+        run: google-chrome --version
+
+      - name: Display Firefox version
+        run: firefox --version
 
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
