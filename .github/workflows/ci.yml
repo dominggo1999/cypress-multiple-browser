@@ -1,3 +1,11 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    types: [opened, synchronize]
+
 jobs:
   build:
     name: Test
@@ -6,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        browser: [chrome, firefox]
+        browser: [chrome, firefox, edge]
 
     steps:
       - name: Check out code
@@ -23,6 +31,12 @@ jobs:
         with:
           node-version: 16
           cache: "pnpm"
+
+      - name: Install Edge
+        uses: browser-actions/setup-edge@v1
+
+      - name: Display Edge version
+        run: (Get-Item (Get-Command msedge).Source).VersionInfo.ProductVersion
 
       - name: Display Chrome version
         run: google-chrome --version

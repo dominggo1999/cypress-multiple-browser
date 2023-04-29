@@ -5,10 +5,12 @@
   "scripts": {
     "cy:open:chrome": "cypress open --e2e --browser chrome",
     "cy:open:firefox": "cypress open --e2e --browser firefox",
+    "cy:open:edge": "cypress open --e2e --browser edge",
     "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\"",
     "type-check": "tsc --noEmit",
     "test:chrome": "cypress run --e2e --browser chrome",
     "test:firefox": "cypress run --e2e --browser firefox",
+    "test:edge": "cypress run --e2e --browser edge",
     "pre-commit": "npx lint-staged"
   },
   "devDependencies": {
