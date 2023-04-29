@@ -34,10 +34,10 @@ jobs:
           cache: "pnpm"
 
       - name: Fetch Edge Browser
-        run: curl -O https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_112.0.1722.64_amd64.deb
+        run: curl -O https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_112.0.1722.64-1_amd64.deb
 
       - name: Install Edge Browser
-        run: sudo apt install ./microsoft-edge-stable_112.0.1722.64_amd64.deb
+        run: sudo apt install ./microsoft-edge-stable_112.0.1722.64-1_amd64.deb
 
       - name: Display Edge version
         run: edge --version
