@@ -37,7 +37,7 @@ jobs:
         uses: browser-actions/setup-edge@v1
 
       - name: Display Edge version
-        run: (Get-Item (Get-Command msedge).Source).VersionInfo.ProductVersion
+        run: edge --version
 
       - name: Display Chrome version
         run: google-chrome --version
