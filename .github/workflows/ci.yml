@@ -72,5 +72,5 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: mochawesome-report
+          name: report-${{ matrix.browser }}
           path: ./mochawesome-report
