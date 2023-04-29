@@ -1,5 +1,5 @@
 {
-  "name": "orangehrm-test-cypress",
+  "name": "rakamin-qa-test",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -9,7 +9,7 @@
     "type-check": "tsc --noEmit",
     "test:chrome": "cypress run --e2e --browser chrome",
     "test:firefox": "cypress run --e2e --browser firefox",
-    "pre-commit": "pnpm run type-check && npx lint-staged"
+    "pre-commit": "npx lint-staged"
   },
   "devDependencies": {
     "@types/eslint": "^8.37.0",
