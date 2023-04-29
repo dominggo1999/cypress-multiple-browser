@@ -56,6 +56,10 @@ jobs:
 
       - name: Run Cypress Test On ${{matrix.browser}} Browser
         uses: cypress-io/github-action@v5
+        # Github still doesn't have an 'allow-error' option, so the overall result of a Cypress test will always return as passed.
+        # However, we still want to continue to upload artifacts (test report) even if there are failed tests.
+        # See : https://github.com/orgs/community/discussions/15452
+        continue-on-error: true
         with:
           command: pnpm run test:${{ matrix.browser }}
         env:
