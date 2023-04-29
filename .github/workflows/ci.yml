@@ -61,3 +61,8 @@ jobs:
         env:
           # Change this value according to what you need
           SECRET_VALUE: ${{ secrets.SECRET_VALUE }}
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: mochawesome-report
+          path: ./mochawesome-report
