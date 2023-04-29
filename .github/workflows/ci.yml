@@ -37,15 +37,19 @@ jobs:
         run: curl -O https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_112.0.1722.64-1_amd64.deb
 
       - name: Install Edge Browser
+        if: matrix.browser == 'edge'
         run: sudo dpkg -i ./microsoft-edge-stable_112.0.1722.64-1_amd64.deb
 
       - name: Display Edge version
+        if: matrix.browser == 'edge'
         run: microsoft-edge --version
 
       - name: Display Chrome version
+        if: matrix.browser == 'chrome'
         run: google-chrome --version
 
       - name: Display Firefox version
+        if: matrix.browser == 'firefox'
         run: firefox --version
 
       - name: Install dependencies
